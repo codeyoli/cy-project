@@ -1,0 +1,20 @@
+{
+   "name": "cy-project",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "killconts": "docker kill $(docker ps -a -q) & docker rm $(docker ps -a -q)",
+      "rmi": "docker rmi $(docker images)",
+      "cloud": "npx cypress-cloud run --parallel --record --key somekey --ci-build-id ",
+      "compose": "docker-compose -f ./docker-compose.minio.yml up"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "cypress": "^12.17.0",
+      "cypress-cloud": "^1.9.1",
+      "prettier": "^3.0.0"
+   }
+}
